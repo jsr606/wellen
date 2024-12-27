@@ -30,9 +30,9 @@ void draw() {
     background(255);
     
     bend += increment;
-    if (bend > 1) bend = 0;
+    if (bend > 1) bend = -1;
     
-    float _y = map(bend,0,1,height,0);
+    float _y = map(bend,-1,1,height,0);
     line(0,_y,width,_y);
     
     int _pitchbend = int(map(bend,0,1,0,16383));
